@@ -37,14 +37,27 @@ public class Hunter extends Actor
     {
         Actor food;
         food = getOneObjectAtOffset(0, 0, Food.class);
+        int comidos = 0;
         if (food != null)
         {
             World world;
             world = getWorld();
             world.removeObject(food);
             Greenfoot.playSound("yum.wav");
-            world.addObject(new Food(), Greenfoot.getRandomNumber(world.getWidth() - 5), Greenfoot.getRandomNumber(world.getHeight() - 5));
-            if (Greenfoot.getRandomNumber(4) == 1)
+            comidos++;
+            if (comidos > 10)
+                {
+                    new GreenfootImage(100, 100).drawString("Juego Ganado", 10 , 10);
+                }
+            if (Greenfoot.getRandomNumber(2) == 1)
+            {
+                world.addObject(new Food(), Greenfoot.getRandomNumber(world.getWidth() - 5), Greenfoot.getRandomNumber(world.getHeight() - 5));   
+            }
+            else
+            {
+                world.addObject(newFood2(), Greenfoot.getRandomNumber(world.getWidth() - 5), Greenfoot.getRandomNumber(world.getHeight() - 5));
+            }
+            if (Greenfoot.getRandomNumber(3) == 1)
                 {
                     world.addObject(new Lion(), 0, Greenfoot.getRandomNumber(world.getHeight() - 5));
                 }
