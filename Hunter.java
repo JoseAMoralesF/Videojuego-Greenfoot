@@ -59,7 +59,7 @@ public class Hunter extends Actor
             {
                 world.addObject(new Food2(), Greenfoot.getRandomNumber(world.getWidth() - 5), Greenfoot.getRandomNumber(world.getHeight() - 5));
             }
-            if (Greenfoot.getRandomNumber(3) == 1)
+            if (Greenfoot.getRandomNumber(2) == 1)
                 {
                     world.addObject(new Lion(), 0, Greenfoot.getRandomNumber(world.getHeight() - 5));
                 }
@@ -84,9 +84,9 @@ public class Hunter extends Actor
             {
                 world.addObject(new Food2(), Greenfoot.getRandomNumber(world.getWidth() - 5), Greenfoot.getRandomNumber(world.getHeight() - 5));
             }
-            if (Greenfoot.getRandomNumber(3) == 1)
+            if (Greenfoot.getRandomNumber(2) == 1)
                 {
-                    world.addObject(new Monkey(), 0, Greenfoot.getRandomNumber(world.getWidth() - 5));
+                    world.addObject(new Monkey(), Greenfoot.getRandomNumber(world.getWidth() - 5), 0);
                }
         }
     }

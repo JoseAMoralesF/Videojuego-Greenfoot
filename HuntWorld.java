@@ -36,5 +36,16 @@ public class HuntWorld extends World
         addObject(food6,373,385);
         Food food7 = new Food();
         addObject(food7,253,431);
+        food7.setLocation(256,441);
+        Food2 food22 = new Food2();
+        addObject(food22,378,248);
+        Food2 food23 = new Food2();
+        addObject(food23,326,187);
+        Food2 food24 = new Food2();
+        addObject(food24,144,258);
+        Food2 food25 = new Food2();
+        addObject(food25,362,479);
+        Food2 food26 = new Food2();
+        addObject(food26,134,95);
     }
 }
